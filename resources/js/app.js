@@ -11,7 +11,41 @@
 //    * <img src="resources/img/genbuzz-example.png"> 
 
 // //Write your code below this line:
+console.log('script is connected');
 
+function GenBuzz(lower, upper) {
+    let i = lower;
+    if(isNaN(lower) || isNaN(upper)){
+        console.log('Inputs need to be numbers');
+    }
+    else if(lower >= upper){
+        console.log('lower number needs to be less than upper number')
+    }
+    while (i <= upper){
+        if(i % 15 == 0){
+            console.log('GenBuzz');
+        }
+        else if(i % 3 == 0){
+            console.log('Gen');
+        }
+        else if(i % 5 == 0){
+            console.log('Buzz');
+        }
+        else{
+            console.log(i);
+        }
+        i++;
+    }
+    // if(lower % 15 == 0 && upper % 15 == 0){
+    //     console.log('GenBuzz');
+    // }
+    // else if(lower % 3 == 0){
+    //     console.log('Gen');
+    // }
+    // else{
+    //     console.log('number is not divisible by 3 or 5');
+    // }
+}
 
 
 
@@ -34,7 +68,20 @@
 // Test your code by printing the funcition's output to the console.
 
 //Write your code below this line:
-
+function isLeapYear(year){
+    if(year % 400 == 0){
+        console.log(`The year ${year} is a leap year :)`);
+    }
+    else if(year % 100 == 0){
+        console.log(`The year ${year} is NOT a leap year :(`);
+    }
+    else if(year % 4 == 0){
+        console.log(`The year ${year} IS a leap year :)`);
+    }
+    else{
+        console.log(`The year ${year} is NOT a leap year`);
+    }
+}
 
 
 
@@ -53,3 +100,16 @@
 // You may not use the built-in Math.sqrt method
 
 //Write your code below this line:
+
+function perfectSquare(num){
+    let i = 1;
+    while(i < num || i == 1 || i * i < num){
+        if(i * i == num){
+            console.log(true);
+            break
+        }else{
+            i++;
+        }
+    }
+}
+
